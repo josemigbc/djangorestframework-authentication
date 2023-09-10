@@ -28,34 +28,22 @@ Quick start
 
     path("api/", include("authentication.urls")),
 
-GOOGLE OAUTH 2.0
+3. GOOGLE OAUTH 2.0
 
 To use Google OAuth 2.0 you must set in settings.py:
 
-GOOGLE_AUTHENTICATION = True
-GOOGLE_AUTHENTICATION_CLIENT_ID = "your_client_id"
-GOOGLE_AUTHENTICATION_CLIENT_SECRET = "your_client_secret"
+    GOOGLE_AUTHENTICATION = True
+    GOOGLE_AUTHENTICATION_CLIENT_ID = "your_client_id"
+    GOOGLE_AUTHENTICATION_CLIENT_SECRET = "your_client_secret"
 
 You should set GOOGLE_AUTHENTICATION_CLIENT_SECRET as enviroment variable because it is a sensible information.
 
-JWT AUTHENTICATION
+4. JWT AUTHENTICATION
 
 To use JWT authentication you must set in settings.py:
 
-JWT_AUTHENTICATION = True
-
-if JWT_AUTHENTICATION:
-    REST_FRAMEWORK = {
-        'DEFAULT_AUTHENTICATION_CLASSES':[
-            'rest_framework_simplejwt.authentication.JWTAuthentication',
-        ],
-    }
+    JWT_AUTHENTICATION = True
 
 Remember add rest_framework_simplejwt to INSTALLED_APPS.
 
-
 You are free to use the authentication system that you wan. You can use either Google OAuth or JWT, and you can use both as well.
-
-
-
-
