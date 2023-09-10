@@ -8,7 +8,6 @@ media
 migrations
 djangorestframework_auth
 test.bat
-dist
 
 
 # Backup files # 
